@@ -1,9 +1,62 @@
 <!DOCTYPE html>
 <HTML>
-   <HEAD>
-      <TITLE>Proy Math Discreta II</TITLE>
-   </HEAD>
-   <BODY>
-      <P> A comenzar
-   </BODY>
+	<HEAD>
+
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+
+		<script src="./js/getJsons.js"></script>
+		<script src="./js/SemanticInitializations.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="./css/styles.css" />
+
+		<TITLE>Proy Math Discreta II</TITLE>
+	</HEAD>
+	<BODY>
+
+		
+		<div class="ui sidebar vertical menu">
+
+			<p> Crea tu lista de productos </p>
+			<hr>
+			<p> Selecciona el tipo de producto: </p>
+			<br>
+			<select class="ui dropdown" id="sel" onchange="return selectedProduct(this)">
+
+			</select>
+		</div>
+
+		<div class="pusher">
+			<div class="ui grid">
+
+				<div class="two wide column">
+
+					<div class="ui vertical animated button" tabindex="0" onclick="sidebar()">
+						<div class="hidden content">Lista</div>
+						<div class="visible content">
+							<i class="shop icon"></i>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="fourteen wide column">
+
+					<canvas id="supermarket" height="600" width="800"></canvas>
+					<script src="./js/main.js"></script>
+
+				</div>
+
+
+			</div>
+
+
+
+		</div>
+
+
+
+
+	</BODY>
 </HTML>
