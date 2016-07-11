@@ -1,0 +1,40 @@
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 14px;
+}
+
+div {
+	/*box-sizing: border-box;*/
+}
+
+h1 {
+	font-size: 16px;
+}
+
+.h1:hover {
+	color: darkgray;
+}
+
+.l-header {
+	background-color: royalblue;
+	color: white;
+}
+
+.l-body {
+	/*width: 100%;*/
+	
+}
+
+.l-footer {
+	background-color: royalblue;
+	font-size: 12px;
+	color: white;
+}
+
+m-canvas {
+	border: 3px solid black;
+}
+
+.text-center {
+	text-align: center;
+}
