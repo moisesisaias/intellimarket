@@ -5,10 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 		
-		<title>Market.y (Discreta II)</title>
+		<title>Intellimarket.y</title>
 		
 		<!-- Bootstrap 3.3.6 -->
-		<link rel="stylesheet" type="text/css" href="ventor/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		
 		<link rel="stylesheet" type="text/css" href="css\styles.css"/>
 		<link rel="stylesheet" type="text/css" href="css\sidebar.css"/>
 	</head>
@@ -57,12 +58,12 @@
 			</div>
 
 			<div id="page-content-wrapper">
-				<div id="main-wrapper" class="col-xs-12 col-md-11 pull-right">
+				<div id="main-wrapper" class="col-xs-12 col-md-11">
 					
-					<div id="main" class="m-canvas center-block">
+					<div class="m-canvas center-block">
 						
 						<!-- Tu real Canvas -->
-						<canvas id="mymap" width="800" height="500">
+						<canvas id="supermarket" width="800" height="600">
 
 						</canvas>
 					</div>
@@ -77,20 +78,21 @@
 
 				</div>
 
-				<!--
-				<nav class="nav navbar-default navbar-fixed-bottom">
-					<div class="container-fluid">
-						<p class="text-center font-footer center">Market.y copyrighted by DiscretTeam.</p>
-					</div>
-				</nav> -->
-
 			</div>
 		
 		</div>
+
+		<!--<script src="./js/main.js"></script>-->
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="ventor/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+		<script src="./js/getjsons.js"></script>
+		<script src="./js/semanticinitializations.js"></script>
+		<script src="./js/dijkstraalgorithm.js"></script>
 		<script>	
 			$("#menu-toggle").click(function(e) {
 				e.preventDefault();
@@ -99,3 +101,4 @@
 		</script>
 	</body>
 </html>
+
