@@ -1,26 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		
+		<title>Intellimarket.y</title>
+		
+		<!-- Bootstrap 3.3.6 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css\styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css\sidebar.css"/>
+	</head>
+	<body>
 
-<head>
-  <meta charset="utf-8"/>
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<div id="header" class="navbar navbar-default navbar-fixed-top nav"> <!-- Page Header -->
 
-  <script src="./js/getjsons.js"></script>
-  <script src="./js/semanticinitializations.js"></script>
-  <script src="./js/dijkstraalgorithm.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css\styles.css"/>
-  <title>Intellimarket</title>
-</head>
+			<div class="container-fluid">
+				<!-- HERE Content of page Header -->
+				<form class="navbar-form navbar-left box">
+					<button type="button" id="menu-toggle" 
+						class="btn btn-default navbar-btn ">
+						<span class="glyphicon glyphicon-shopping-cart"></span> Mi Lista</button>
+				</form>
 
-<body>
+				<div class="center-block title">
+					<h1 class="text-center">
+						<a href="#"><strong> Mi Sucursal </strong></a></h1>
+				</div>
 
-  <!-- CANVAS MUST BE HERE!! -->
+			</div>
+		</div>
 
-  <script type="text/javascript" src="./js/main.js"></script>
-  
-</html> 
+		<div id="wrapper">
 
+			<div id="sidebar-wrapper"> <!-- Sidebar  -->
+
+				<div id="sidebar">
+
+					<!-- HERE Content of sidebar -->
+					<ul class="sidebar-nav">
+						<li><h2><strong>La lista</strong></h2></li>
+						<li>La categoria 0
+							<ul>
+								<li>Pizza</li>
+								<li>Salami</li>
+								<li>Queso</li>
+							</ul>
+						</li>
+					</ul>
+
+
+				</div>
+			</div>
+
+			<div id="page-content-wrapper">  <!-- Page Content -->
+				<div id="main-wrapper" class="col-xs-12 col-md-11">
+
+					<div > <!-- class="m-canvas center-block" -->
+						
+						<!-- HERE GOES THE CANVAS !!! -->
+						<canvas id="supermarket" width="800" height="600">
+
+						</canvas>
+
+					</div>
+
+					<nav class="nav navbar-default footer"> <!-- Page Footer -->
+						
+						<!-- Here content of Page Footer -->
+						<div class="container-fluid center-block">
+							<p class="text-center font-footer">Intellimarket.y copyrighted by DiscretTeam.</p>
+						</div>
+					</nav>
+
+				</div>
+
+			</div>
+		
+		</div>
+
+		<script type="text/javascript" src="./js/main.js"></script>
+		<script src="./js/getjsons.js"></script>
+		<script src="./js/semanticinitializations.js"></script>
+		<script src="./js/dijkstraalgorithm.js"></script>
+		<script>	
+			$("#menu-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+			});
+		</script>
+	</body>
+</html>
