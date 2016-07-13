@@ -1,0 +1,17 @@
+{
+	"products":[
+		{"id":"block1","title":"arroz","type":"lacteos"},
+		{"id":"block2","title":"Refrescos","type":"lacteos"},
+		{"id":"block3","title":"queso","type":"lacteos"},
+		{"id":"block4","title":"jamon","type":"lacteos"},
+		{"id":"block5","title":"snacks","type":"lacteos"},
+		{"id":"block6","title":"habichuelas","type":"lacteos"},
+		{"id":"block7","title":"yogourt","type":"lacteos"},
+		{"id":"block8","title":"pan","type":"lacteos"},
+		{"id":"block9","title":"ketchup","type":"lacteos"},
+		{"id":"block10","title":"huevos","type":"lacteos"},
+		{"id":"block11","title":"maiz","type":"lacteos"},
+		{"id":"block12","title":"zanahoria","type":"lacteos"},
+		{"id":"block13","title":"lechuga","type":"lacteos"}
+	]
+}
