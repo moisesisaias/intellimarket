@@ -10,32 +10,92 @@
 		<!-- Bootstrap 3.3.6 -->
 		<link rel="stylesheet" type="text/css" href="ventor/bootstrap-3.3.6-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css\styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css\sidebar.css"/>
 	</head>
 	<body>
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fluid l-header">
-				<h1 class="text-center"> Mi Sucursal </h1>
-			</div>
-		</nav>
-		<div class="container-fluid l-body">
-			<div class="row">
-				<div class="col-xs-6 col-md-4">List Menu</div>
-				<div class="col-xs-12 col-md-8">
-					<div class="m-canvas">
-						<canvas id="mymap" class="m-canvas" width="500" height="300"></canvas>
-					</div>
+
+		<!-- Header de la pagina -->
+		<div id="header" class="navbar navbar-default navbar-fixed-top nav">
+
+			<!-- Contenido del Header de la pagina -->
+			<nav class="container-fluid">
+				
+				<form class="navbar-form navbar-left box">
+					<button type="button" id="menu-toggle" 
+						class="btn btn-default navbar-btn ">
+						<span class="glyphicon glyphicon-shopping-cart"></span> Mi Lista</button>
+				</form>
+
+				<div class="center-block title">
+					<h1 class="text-center">
+						<a href="#"><strong> Mi Sucursal </strong></a></h1>
 				</div>
+
 			</div>
 		</div>
-		<footer class="footer">
-			<div class="container-fluid l-footer">
-				<p class="text-center">Market.y copyrighted by DiscretTeam.</p>
-			</div>
-		</footer>
 
+		<div id="wrapper">
+
+			<div id="sidebar-wrapper">
+
+				<!-- Contenido del sidebar -->
+				<div id="sidebar">
+
+					<ul class="sidebar-nav">
+						<li><h2><strong>La lista</strong></h2></li>
+						<li>La categoria 0
+							<ul>
+								<li>Pizza</li>
+								<li>Salami</li>
+								<li>Queso</li>
+							</ul>
+						</li>
+					</ul>
+
+
+				</div>
+			</div>
+
+			<div id="page-content-wrapper">
+				<div id="main-wrapper" class="col-xs-12 col-md-11 pull-right">
+					
+					<div id="main" class="m-canvas center-block">
+						
+						<!-- Tu real Canvas -->
+						<canvas id="mymap" width="800" height="500">
+
+						</canvas>
+					</div>
+
+					<!-- Footer de la pagina -->
+					<nav class="nav navbar-default footer">
+						
+						<div class="container-fluid center-block">
+							<p class="text-center font-footer">Market.y copyrighted by DiscretTeam.</p>
+						</div>
+					</nav>
+
+				</div>
+
+				<!--
+				<nav class="nav navbar-default navbar-fixed-bottom">
+					<div class="container-fluid">
+						<p class="text-center font-footer center">Market.y copyrighted by DiscretTeam.</p>
+					</div>
+				</nav> -->
+
+			</div>
+		
+		</div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="ventor/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+		<script>	
+			$("#menu-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+			});
+		</script>
 	</body>
 </html>
