@@ -5,30 +5,27 @@ var products;
 
 		$(document).ready(function(){
 			var jqxhr = $.getJSON( "./data/products.json", function(){
-				console.log( "Request initialized" );
+				console.log( "get Request initialized" );
 			})
 			.done(function(data) {
 				products = data.products;
 			})
 			.fail(function() {
-				console.log( "error in the request");
+				console.log( "error getting products.json");
 			});
 
-jqxhr.complete(function() {
-			
+jqxhr.complete(function() {		
 		$.each(products, function(i, option) {
 					$('#sel').append($('<option/>').attr("value",option.id).text(option.title));
 				});
 		//console.log("VEAMOS "+map.get('block1'));
-
-
 	});
 });
 
 
 	$(document).ready(function(){
 			var jqxhr = $.getJSON("./data/cadenaMap.json", function(){
-				console.log( "Request initialized" );
+				console.log( "get Request initialized" );
 			})
 			.done(function(data) {
 				map = data;
