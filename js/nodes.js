@@ -88,7 +88,7 @@ nodes.push({x:525, y:375, r:nRadio, sA:sAngle, eA:eAngle, color:'0f0'});
 */
 
 function showNodes(pH, pW) {
-	var cv = document.getElementById("canv");
+	var cv = document.getElementById("supermarket");
 	var cvx = cv.getContext("2d");
 
 	for (var i = 0; i < nodes.length; i++) {

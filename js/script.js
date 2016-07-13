@@ -23,7 +23,7 @@ objects.push({x:550, y:225, width:25, heigth:75,  color:'#0f0'});
 
 window.onload = function() {
 
-	var cv = document.getElementById("canv");
+	var cv = document.getElementById("supermarket");
 
 	var cvx = cv.getContext("2d");
 	cvx.save();
