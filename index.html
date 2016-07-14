@@ -9,8 +9,12 @@
 		
 		<!-- Bootstrap 3.3.6 -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 		<link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  		<script src="./js/autocomplete.js"></script>
 		
 		<link rel="stylesheet" type="text/css" href="css\styles.css"/>
 		<link rel="stylesheet" type="text/css" href="css\sidebar.css"/>
@@ -44,7 +48,27 @@
 					<!-- HERE Content of sidebar -->
 					<ul class="sidebar-nav">
 						<li><h2><strong>La lista</strong></h2></li>
-						<li>La categoria 0
+						<div class="ui-widget">
+						<center>
+  							<form id="searchForm" role="SearchProduct">
+								<input id="tags" name="tags"  onkeydown = "if(event.keyCode === 13) document.getElementById('addToList').click()">
+								</br>
+								</br>
+								<input class="btn btn-danger" type="button" value="Listar" id="addToList" onclick="addProduct()">
+								<input id="" class="btn btn-danger" type="button" value="Eliminar" onclick="deleteProduct()">
+								</br>
+								</br>
+								<select id="listbox" name="listbox" size="21" style="width:200px;">
+
+								</select>
+								<input class="btn btn-danger text-center" type="button" value="Crear ruta" onclick="findProduct()">
+								</br>
+								</br>		
+
+							</form>
+						</center>	
+						</div>
+						<!-- <li>La categoria 0
 							<ul>
 								<li>Pizza</li>
 								<li>Salami</li>
@@ -53,17 +77,17 @@
 						</li>
 					</ul>
 
-
+ -->
 				</div>
 			</div>
 
 			<div id="page-content-wrapper">  <!-- Page Content -->
 				<div id="main-wrapper" class="col-xs-12 col-md-11">
 
-					<div > <!-- class="m-canvas center-block" -->
+					<div class="m-canvas center-block"> <!-- class="m-canvas center-block" -->
 						
 						<!-- HERE GOES THE CANVAS !!! -->
-						<canvas id="supermarket" width="800" height="600">
+						<canvas id="supermarket" width="1200" height="900">
 
 						</canvas>
 
