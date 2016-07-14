@@ -258,3 +258,13 @@ body {
 .ui-helper-hidden-accessible > div {
     padding: 5px;
 }
+
+select.form-control {
+    overflow: auto;
+}
+
+.crear:hover {
+    border-color: #F51AFF;
+    background-color: #F51AFF;
+    color: white;
+}

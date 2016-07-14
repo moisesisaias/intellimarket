@@ -51,19 +51,24 @@
 						<div class="ui-widget">
 						<center>
   							<form id="searchForm" role="SearchProduct">
-								<input id="tags" name="tags"  onkeydown = "if(event.keyCode === 13) document.getElementById('addToList').click()">
+								<div class="form-group input-group"> 
+									<input id="tags" class="form-control" style="width:150px" name="tags" placeholder="Buscar..."  onkeydown = "if(event.keyCode === 13) document.getElementById('addToList').click()"/>
+									<button class="btn btn-success" type="button" value="Listar" id="addToList" onclick="addProduct()">
+										<span class="glyphicon glyphicon-plus"></span>
+									</button>
+								</div>
+								<button id="" class="btn btn-danger" type="button" value="Eliminar" onclick="deleteProduct()">
+									<span class="glyphicon glyphicon-remove-circle"></span> Eliminar producto
+								</button>
 								</br>
-								</br>
-								<input class="btn btn-danger" type="button" value="Listar" id="addToList" onclick="addProduct()">
-								<input id="" class="btn btn-danger" type="button" value="Eliminar" onclick="deleteProduct()">
-								</br>
-								</br>
-								<select id="listbox" name="listbox" size="21" style="width:200px;">
+								<select id="listbox" name="listbox" size="21" class="form-control" style="width:200px;">
 
 								</select>
-								<input class="btn btn-danger text-center" type="button" value="Crear ruta" onclick="createRoute()">
 								</br>
-								</br>		
+								<button class="btn btn-default text-center crear" type="button" value="Crear ruta" onclick="createRoute()">
+									<span class="glyphicon glyphicon-random"></span> Crear ruta
+								</button>
+								</br>	
 
 							</form>
 						</center>	
