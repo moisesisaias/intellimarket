@@ -49,23 +49,24 @@
 					<ul class="sidebar-nav">
 						<li><h2><strong>La lista</strong></h2></li>
 						<div class="ui-widget">
-  							<form id="searchForm" method="post" role="SearchProduct">
-								<input id="tags" name="tags">
+						<center>
+  							<form id="searchForm" role="SearchProduct">
+								<input id="tags" name="tags"  onkeydown = "if(event.keyCode === 13) document.getElementById('addToList').click()">
 								</br>
 								</br>
-								<input class="btn btn-danger" type="button" value="Listar" onclick="addProduct()">
+								<input class="btn btn-danger" type="button" value="Listar" id="addToList" onclick="addProduct()">
 								<input id="" class="btn btn-danger" type="button" value="Eliminar" onclick="deleteProduct()">
 								</br>
 								</br>
 								<select id="listbox" name="listbox" size="21" style="width:200px;">
 
 								</select>
-								<input class="btn btn-danger text-center" type="button" value="Buscar" onclick="findProduct()">
+								<input class="btn btn-danger text-center" type="button" value="Crear ruta" onclick="findProduct()">
 								</br>
 								</br>		
 
 							</form>
-							
+						</center>	
 						</div>
 						<!-- <li>La categoria 0
 							<ul>

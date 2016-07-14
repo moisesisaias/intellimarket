@@ -1,59 +1,48 @@
-$( function() {
-	// var availableTags = [
-	// "ActionScript",
-	// "AppleScript",
-	// "Asp",
-	// "BASIC",
-	// "C",
-	// "C++",
-	// "Clojure",
-	// "COBOL",
-	// "ColdFusion",
-	// "Erlang",
-	// "Fortran",
-	// "Groovy",
-	// "Haskell",
-	// "Java",
-	// "JavaScript",
-	// "Lisp",
-	// "Perl",
-	// "PHP",
-	// "Python",
-	// "Ruby",
-	// "Scala",
-	// "Scheme"
-	// ];
-
-	
-} );
+var shoppingList = [];
 
 function addProduct(){
 
-	var SelectProduct = document.getElementById("tags").value;
-	console.log(SelectProduct);
+	var selectProduct = document.getElementById("tags").value;
+	console.log(selectProduct);
 	var list = document.getElementById("listbox");
 	var optiontag = document.createElement('option');
-	var option = document.createTextNode(SelectProduct);
+	var option = document.createTextNode(selectProduct);
 	optiontag.appendChild(option);
 	try {
 		list.add(optiontag, null); 
-
+		if(searchProduct(mapProducts.get(selectProduct)) === -1){
+			shoppingList.push(mapProducts.get(selectProduct));
+		}
 	}catch(error) {
 		list.add(optiontag);
 	}
-	SelectProduct.value = " ";
+	selectProduct.value = "";
+	console.log(mapProducts.get(selectProduct));
+	console.log(shoppingList);
 
 }
-
 function deleteProduct(){
 
+	var selectProduct = document.getElementById("tags").value;
 	var x = document.getElementById("listbox");
 	console.log(x.selectedIndex);
 	x.remove(x.selectedIndex);
+
+	var pos = searchProduct(mapProducts.get(selectProduct));
+
+	if(pos != -1){
+			shoppingList.splice(pos,1);
+	}
+	console.log(shoppingList);
 }
 
-function searchProduct(){
+function searchProduct(value){
 
+	res = -1;
+	for(var i=0;i < shoppingList.length;i++){
+		if(value === shoppingList[i]) res = i;
+	}
 
+	return res;
 
 }

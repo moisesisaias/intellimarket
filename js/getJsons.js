@@ -1,7 +1,9 @@
 
 // THIS CODE DOES A GET REQUEST TO READ THE PRODUCTOS FORM A JSON FILE
 var map;
+var mapProducts = new Map();
 var products;
+var cadenaProducts = [];
 
 $(document).ready(function(){
 	var jqxhr = $.getJSON( "./data/products.json", function(){
@@ -15,17 +17,13 @@ $(document).ready(function(){
 	});
 
 	jqxhr.complete(function() {		
-		// $.each(products, function(i, option) {
 
-		// 			// $('#sel').append($('<option/>').attr("value",option.id).text(option.title));
-		// 		});
-		//console.log("VEAMOS "+map.get('block1'));
-
-		$("#tags").autocomplete({
-			source: products
-           
-
-
+		for(var i=0; i < products.length; i++){
+			cadenaProducts.push(products[i].title);
+			mapProducts.set(products[i].title,products[i].id);
+		}
+				$("#tags").autocomplete({
+				source: cadenaProducts
 		});
 	});
 });
