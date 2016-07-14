@@ -225,3 +225,25 @@ body {
     }
   }
 }
+
+.m-canvas center-block {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #supermarket {
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    @media(max-width:1300px) {
+        .m-canvas center-block {
+            margin: 0 50px;
+        }
+        #supermarket {
+            width: 100%;
+            height: auto;
+        }
+    }
