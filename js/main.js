@@ -5,29 +5,6 @@
 
 	function setObjects(){
 
-		objects = [
-		
-		{"id":"block1","x":0,"y":0,"height":450,"width":80,"color":'#666'},
-		{"id":"block2","x":80,"y":0,"height":80,"width":640,"color":'#666'},
-		{"id":"block3","x":720,"y":0,"height":450,"width":80,"color":'#666'},
-		{"id":"block4","x":0,"y":560,"height":40,"width":80,"color":'#666'},
-		{"id":"block5","x":720,"y":560,"height":40,"width":80,"color":'#666'},
-		{"id":"block6","x":150,"y":560,"height":40,"width":500,"color":'#666'},
-		{"id":"block7","x":720,"y":100,"height":80,"width":80,"color":'#666'},
-
-		{"id":"block1","x":100,"y":100,"height":80,"width":80,"color":'#666'},
-		{"id":"block2","x":380,"y":100,"height":80,"width":80,"color":'#666'},
-		{"id":"block3","x":100,"y":250,"height":80,"width":80,"color":'#666'},
-		{"id":"block4","x":380,"y":250,"height":80,"width":80,"color":'#666'},
-		{"id":"block5","x":640,"y":175,"height":80,"width":80,"color":'#666'}
-
-		];
-
-		objects2 = [
-
-		
-
-		]
 			//alert("Asda");
 			c = document.getElementById("supermarket");
 			cont = c.getContext('2d');
@@ -60,11 +37,12 @@
 		}
 
 
-		function findShortestPath(){
+		function findShortestPath(arr){
 			 graph = new Graph(map);
+			 arr.push("f6c4");
+			 console.log("ddddddddd "+arr);
 
-			 var ar = ["f5c8","f3c7","f1c7","f6c4"];
-			console.log(graph.findShortestPath(ar));
+			console.log(graph.findShortestPath(arr));
 
 			/*var path = graph.findShortestPath('block1', 'block5');
 			drawLines(path);*/

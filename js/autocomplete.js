@@ -11,9 +11,8 @@ function addProduct(){
 
 	try {
 		list.add(optiontag, null); 
-		if(searchProduct(mapProducts.get(selectProduct),shoppingList) === -1){
-			shoppingList.push(mapProducts.get(selectProduct));
-		}
+		shoppingList.push(mapProducts.get(selectProduct));
+		
 	}catch(error) {
 		alert("error al agregar el articulo");
 	}
@@ -30,7 +29,6 @@ function deleteProduct(){
 	var pos = searchProduct(mapProducts.get(itemToDelete),shoppingList);
 	console.log("valor "+pos);
 	if(pos != -1){
-		if(pos === 0) shoppingList.pop();
 			shoppingList.splice(pos,1);
 			console.log(shoppingList);
 	}
@@ -46,5 +44,44 @@ function searchProduct(value,arr){
 	}
 
 	return res;
+
+}
+
+function createRoute(){
+
+	var validArray = avoidDuplicates(shoppingList); 
+	var finalArray = orderByColumn(validArray);
+	findShortestPath(finalArray);
+}
+
+function orderByColumn(arr){
+
+	var orderedArray = [];
+	var currentColumn = 8;
+
+	for(var c=0; c<8; c++){
+		for(var i =0; i< arr.length;i++){
+			if(getColumnNumber(arr[i]) == currentColumn) orderedArray.push(arr[i]);
+		}
+		currentColumn--;
+	}
+
+	console.log(orderedArray);
+	return orderedArray;
+}
+
+function getColumnNumber(node){
+	return node.charAt(3);
+}
+
+function avoidDuplicates(arr){
+
+	var filteredArray = [];
+	filteredArray.push("f5c8");
+
+	$.each(arr, function(i, el){
+    if($.inArray(el, filteredArray) === -1) filteredArray.push(el);
+	});
+	return filteredArray;
 
 }
