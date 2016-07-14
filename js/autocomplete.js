@@ -10,13 +10,12 @@ function addProduct(){
 	optiontag.appendChild(option);
 	try {
 		list.add(optiontag, null); 
-		if(searchProduct(mapProducts.get(selectProduct)) === -1){
+		if(searchProduct(mapProducts.get(selectProduct),shoppingList) === -1){
 			shoppingList.push(mapProducts.get(selectProduct));
 		}
 	}catch(error) {
-		list.add(optiontag);
+		alert("error al agregar el articulo");
 	}
-	selectProduct.value = "";
 	console.log(mapProducts.get(selectProduct));
 	console.log(shoppingList);
 
@@ -28,7 +27,7 @@ function deleteProduct(){
 	console.log(x.selectedIndex);
 	x.remove(x.selectedIndex);
 
-	var pos = searchProduct(mapProducts.get(selectProduct));
+	var pos = searchProduct(mapProducts.get(selectProduct),shoppingList);
 
 	if(pos != -1){
 			shoppingList.splice(pos,1);
@@ -36,11 +35,11 @@ function deleteProduct(){
 	console.log(shoppingList);
 }
 
-function searchProduct(value){
+function searchProduct(value,arr){
 
 	res = -1;
-	for(var i=0;i < shoppingList.length;i++){
-		if(value === shoppingList[i]) res = i;
+	for(var i=0;i < arr.length;i++){
+		if(value === arr[i]) res = i;
 	}
 
 	return res;

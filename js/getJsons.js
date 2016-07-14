@@ -17,10 +17,10 @@ $(document).ready(function(){
 	});
 
 	jqxhr.complete(function() {		
-
+		console.log( "products loaded sucessfully" );
 		for(var i=0; i < products.length; i++){
 			cadenaProducts.push(products[i].title);
-			mapProducts.set(products[i].title,products[i].id);
+			mapProducts.set(products[i].title,products[i].node);
 		}
 				$("#tags").autocomplete({
 				source: cadenaProducts
