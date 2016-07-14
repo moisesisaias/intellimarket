@@ -2,8 +2,8 @@ var nodes = [];
 var nRadio = 8;
 var sAngle = 0;
 var eAngle = 2*Math.PI;
-var nColor = '#ff1a1a';
-var status = "off";
+var nColor = '#26FF85';
+var status = "on";
 /* Cicle or arc
 - x					The x-coordinate of the center of the circle	Play it »
 - y					The y-coordinate of the center of the circle	Play it »
