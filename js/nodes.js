@@ -3,7 +3,7 @@ var nRadio = 8;
 var sAngle = 0;
 var eAngle = 2*Math.PI;
 var nColor = '#26FF85';
-var status = "on";
+var status = "off";
 /* Cicle or arc
 - x					The x-coordinate of the center of the circle	Play it »
 - y					The y-coordinate of the center of the circle	Play it »
@@ -17,6 +17,7 @@ var status = "on";
 	ctx.arc(95,50,40,0,2*Math.PI);
 	ctx.stroke();
 */
+//nodes["f6c8"] = {"x":375, "y":600, "r":nRadio, "sA":sAngle, "eA":eAngle, "color":nColor, "status":"on"};
 
 // Primer columna
 nodes["f1c1"] = {"x":65, "y":60, "r":nRadio, "sA":sAngle, "eA":eAngle, "color":nColor, "status":status};

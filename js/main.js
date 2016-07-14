@@ -46,9 +46,25 @@
 
 			var path = graph.findShortestPath(arr);
 			console.log(path);
-			drawLinesxy(path);
+			//drawLinesxy(path);
+			drawLineByLine(path);
 
 		}
+
+		function drawLineByLine(arr){
+			for(var i = 0; i < arr.length-1; i++){
+				//var nod = arr[i];
+				cvx.restore();
+				cvx.stroke();
+				nodes[arr[i]].status = "on";
+				nodes[arr[i+1]].status = "on";
+				drawLines(pH, pW);
+				drawOnNodes(pH, pW);
+
+				nodes[arr[i]].status = "off";
+				nodes[arr[i+1]].status = "off";
+			}
+		};
 
 		function drawLinesxy(arr){
 

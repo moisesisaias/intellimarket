@@ -39,10 +39,10 @@ window.onload = function() {
 		cvx.fillStyle = objects[i].color;
 		cvx.fillRect(objects[i].x * pW, objects[i].y * pH, objects[i].width * pW, objects[i].heigth * pH);
 	}
-	
+	drawOnNodes(pH, pW);
+	cvx.save();
 	//drawLines(pH, pW);	
 	//drawLine(6, pH, pW);	
-	drawOnNodes(pH, pW);
-	
+	//
 };
 
