@@ -20,6 +20,8 @@ objects.push({"x":550, "y":225, "width":25, "heigth":75,  "color":'#71687D'});
 
 window.onload = function() {
 
+
+
 	var cv = document.getElementById("supermarket");
 
 	var cvx = cv.getContext("2d");
@@ -40,6 +42,9 @@ window.onload = function() {
 		cvx.fillRect(objects[i].x * pW, objects[i].y * pH, objects[i].width * pW, objects[i].heigth * pH);
 	}
 	
+	drawLines(pH, pW);	
+	//drawLine(6, pH, pW);	
 	drawOnNodes(pH, pW);
+	
 };
 
