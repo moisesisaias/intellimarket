@@ -42,20 +42,21 @@
 			 arr.push("f6c4");
 			 console.log("ddddddddd "+arr);
 
-			console.log(graph.findShortestPath(arr));
+			
 
-			/*var path = graph.findShortestPath('block1', 'block5');
-			drawLines(path);*/
+			var path = graph.findShortestPath(arr);
+			console.log(path);
+			drawLinesxy(path);
 
 		}
 
-		function drawLines(arr){
+		function drawLinesxy(arr){
 
 			for(var i=0;i<arr.length-1;i++){
-				cont.beginPath();
-				cont.moveTo(mapita.get(arr[i]).x, mapita.get(arr[i]).y);
-				cont.lineTo(mapita.get(arr[i+1]).x, mapita.get(arr[i+1]).y);
-				cont.stroke();
+				cvx.beginPath();
+				cvx.moveTo(nodes[arr[i]].x * pW,nodes[arr[i]].y  * pH);
+				cvx.lineTo(nodes[arr[i+1]].x  * pW,nodes[arr[i+1]].y   * pW);
+				cvx.stroke();
 			}
 		}
 

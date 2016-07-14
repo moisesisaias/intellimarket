@@ -3,6 +3,11 @@ var objects = [];
 var pH = 500;//1+0.10; // original:500 - actual:550
 var pW = 650;// 1+0.3846; // original:650 - actual:900
 
+var cv = document.getElementById("supermarket");
+
+var cvx = cv.getContext("2d");
+cvx.save();
+
 objects.push({"x":0,   "y":0,  "width":650, "heigth":50,   "color":'#E8B53A'});
 
 objects.push({"x":0,   "y":50,  "width":25, "heigth":300,  "color":'#E8B53A'});
@@ -20,13 +25,6 @@ objects.push({"x":550, "y":225, "width":25, "heigth":75,  "color":'#71687D'});
 
 window.onload = function() {
 
-
-
-	var cv = document.getElementById("supermarket");
-
-	var cvx = cv.getContext("2d");
-	cvx.save();
-
 	/*
 	cvx.fillStyle = "#FF0000";
 	cvx.moveTo(250,250);
@@ -42,7 +40,7 @@ window.onload = function() {
 		cvx.fillRect(objects[i].x * pW, objects[i].y * pH, objects[i].width * pW, objects[i].heigth * pH);
 	}
 	
-	drawLines(pH, pW);	
+	//drawLines(pH, pW);	
 	//drawLine(6, pH, pW);	
 	drawOnNodes(pH, pW);
 	
