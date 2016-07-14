@@ -44,6 +44,6 @@ window.onload = function() {
 		cvx.fillRect(objects[i].x * pW, objects[i].y * pH, objects[i].width * pW, objects[i].heigth * pH);
 	}
 	
-	showNodes(pH, pW);
+	drawOnNodes(pH, pW);
 };
 
